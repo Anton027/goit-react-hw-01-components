@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+
 const InfoProfile = ({ label, quantity }) => { 
   return (
     <li>
@@ -13,12 +13,12 @@ const InfoProfile = ({ label, quantity }) => {
 
 const UserInfo = ({ label, text, info, imgUrl}) => {
   return (
-    <Fragment>
+    <>
       <img src={imgUrl} alt={label} width='120'/>
       <p>{label}</p>
       <p>{text}</p>
       <p>{info}</p>
-    </Fragment>
+    </>
   )
 };
 
