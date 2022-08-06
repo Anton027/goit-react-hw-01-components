@@ -1,26 +1,7 @@
+import { InfoProfile } from "components/InfoProfile/InfoProfile";
+import { UserInfo } from "components/UserInfo/UserInfo";
+import PropTypes from 'prop-types';
 
-const InfoProfile = ({ label, quantity }) => { 
-  return (
-    <li>
-      <span>{label}</span>
-      <span>{quantity}</span>
-    </li>
-  )
-};
-// const InfoUser = ({ label }) => {
-//   return <p>{label}</p>
-// };
-
-const UserInfo = ({ label, text, info, imgUrl}) => {
-  return (
-    <>
-      <img src={imgUrl} alt={label} width='120'/>
-      <p>{label}</p>
-      <p>{text}</p>
-      <p>{info}</p>
-    </>
-  )
-};
 
 export const Profile = ({ user:
   { username, tag, location, avatar, stats }
@@ -38,3 +19,17 @@ export const Profile = ({ user:
     </div>
   );
 }
+
+Profile.propTypes = {
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes:PropTypes.number.isRequired
+    }).isRequired
+  }).isRequired
+};

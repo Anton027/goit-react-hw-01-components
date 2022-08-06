@@ -1,13 +1,6 @@
 import data from 'components/Statistics/data.json';
-
-const InfoStatic = ({ label, percentage }) => { 
-    return (
-        <li>
-            <span>{label}</span>
-            <span>{percentage}</span>
-        </li>
-    )
-};
+import PropTypes from 'prop-types';
+import { InfoStatistic } from 'components/InfoStatistic/InfoStatistic';
 
 export const Statistic = ({ title }) => {
     return (
@@ -15,9 +8,15 @@ export const Statistic = ({ title }) => {
             <h3>{title}</h3>
             <ul>
                 {data.map( ({ id,label,percentage }) => (
-                    <InfoStatic key={id} label={label} percentage={percentage} />
+                    <InfoStatistic key={id} label={label} percentage={percentage} />
                 )) }
             </ul>
         </section>
     )
+}
+
+Statistic.propTypes = {
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired
 }

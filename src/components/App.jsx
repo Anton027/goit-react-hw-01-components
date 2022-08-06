@@ -6,11 +6,11 @@ import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
 
 export const App = () => {
   return (
-    <div>
+    <>
       <Profile user={user} />
       <Statistic title={'Upload stats'} />
       <FriendList />
       <TransactionHistory />
-    </div>
+    </>
   );
 };

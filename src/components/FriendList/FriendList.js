@@ -1,14 +1,6 @@
 import friends from "components/FriendList/friends.json";
-
-const FriendListItem = ({ avatar, name, isOnline }) => {
-    return (
-        <li>
-            <span >{isOnline}</span>
-            <img src={avatar} alt="User avatar" width="48" />
-            <p >{name}</p>
-        </li>
-    )
-}
+import { FriendListItem } from "components/FriendListItem/FriendListItem";
+import PropTypes from 'prop-types';
 
 export const FriendList = () => {
     return (
@@ -19,7 +11,13 @@ export const FriendList = () => {
                     name={name} isOnline={isOnline}
                 />
             ))}
-            
         </ul>
     )
 };
+
+FriendList.propTypes = {
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired
+}
