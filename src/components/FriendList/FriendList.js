@@ -1,9 +1,9 @@
 
 import { Box } from 'components/Box';
 import { FriendListItem } from "components/FriendListItem/FriendListItem";
+import PropTypes from 'prop-types';
 
-
-export const FriendList = ({friends}) => {
+export const FriendList = ({ friends }) => {
     return (
         <Box as={"ul"}
             display='flex'
@@ -20,4 +20,6 @@ export const FriendList = ({friends}) => {
         </Box>
     )
 };
-
+FriendList.propTypes = {
+    friends: PropTypes.array.isRequired
+}

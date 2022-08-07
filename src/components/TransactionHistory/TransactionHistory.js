@@ -1,26 +1,30 @@
-
+import PropTypes from 'prop-types';
 import { TransactionItem } from "components/TransactionItem/TransactionItem";
 import { Box } from 'components/Box';
-import { TableHead } from "./TransactionHistory.styled";
+import { TableHead, TbHeadItem } from "./TransactionHistory.styled";
 export const TransactionHistory = ({items}) => {
     return (
         <Box as={"table"}>
-            <thead>
+            <Box as={'thead'}>
                 <TableHead>
-                    <th>Type</th>
-                    <th>Amount</th>
-                    <th>Currency</th>
+                    <TbHeadItem>Type</TbHeadItem>
+                    <TbHeadItem>Amount</TbHeadItem>
+                    <TbHeadItem>Currency</TbHeadItem>
                 </TableHead>
-            </thead>
+            </Box>
 
-            <tbody>
+            <Box as={"tbody"}>
                 {items.map(({ id, type, amount, currency }) => (
                     <TransactionItem key={id}
                         type={type} amount={amount}
                         currency={currency}
                     />
                 ))}
-            </tbody>
+            </Box>
         </Box>
     )
+}
+
+TransactionHistory.propTypes = {
+    items: PropTypes.array.isRequired
 }

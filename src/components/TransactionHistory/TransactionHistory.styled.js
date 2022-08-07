@@ -1,11 +1,18 @@
 import styled from 'styled-components';
 
 export const TableHead = styled.tr`
+    font-size: ${p => p.theme.fontSizes.m};
     background-color: blue;
-    color: white;
-    padding: 20px;
+    color: ${p => p.theme.colors.white};
+    
     font-style: italic;
-    caption-side: bottom;
+    border: ${p => p.theme.borders.normal};
     text-align: right;
-    letter-spacing: 1px;
+    
 `;
+
+export const TbHeadItem = styled.th`
+    padding: ${p => p.theme.space[4]}px;
+    font-family: ${p => p.theme.fonts.heading};
+`;
+
