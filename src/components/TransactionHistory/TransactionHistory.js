@@ -1,10 +1,10 @@
 import transactions from "components/TransactionHistory/transactions.json";
 import { TransactionItem } from "components/TransactionItem/TransactionItem";
-import PropTypes from 'prop-types';
+import { Box } from 'components/Box';
 
 export const TransactionHistory = () => {
     return (
-        <table>
+        <Box as={"table"}>
             <thead>
                 <tr>
                     <th>Type</th>
@@ -21,13 +21,6 @@ export const TransactionHistory = () => {
                     />
                 ))}
             </tbody>
-        </table>
+        </Box>
     )
-}
-
-TransactionHistory.propTypes = {
-    type: PropTypes.string.isRequired,
-    amount: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired
 }

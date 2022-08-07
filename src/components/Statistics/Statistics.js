@@ -1,22 +1,22 @@
 import data from 'components/Statistics/data.json';
 import PropTypes from 'prop-types';
+import { Box } from 'components/Box';
 import { InfoStatistic } from 'components/InfoStatistic/InfoStatistic';
 
 export const Statistic = ({ title }) => {
     return (
-        <section>
+        <Box as={"section"}>
             <h3>{title}</h3>
-            <ul>
+            <Box as={"ul"}>
                 {data.map( ({ id,label,percentage }) => (
                     <InfoStatistic key={id} label={label} percentage={percentage} />
                 )) }
-            </ul>
-        </section>
+            </Box>
+        </Box>
     )
 }
 
 Statistic.propTypes = {
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired,
-    id: PropTypes.string.isRequired
+    title: PropTypes.string,
+
 }

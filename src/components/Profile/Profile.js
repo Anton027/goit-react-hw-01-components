@@ -1,5 +1,6 @@
 import { InfoProfile } from "components/InfoProfile/InfoProfile";
 import { UserInfo } from "components/UserInfo/UserInfo";
+import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
 
 
@@ -7,16 +8,16 @@ export const Profile = ({ user:
   { username, tag, location, avatar, stats }
 }) => {
   return (
-    <div >
-      <div>
+    <Box >
+      <Box>
         <UserInfo imgUrl={avatar} label={username} text={tag} info={location} />
-      </div>
-      <ul>
+      </Box>
+      <Box as={"ul"}>
         <InfoProfile label={`Followers`} quantity={stats.followers} />
         <InfoProfile label={`Views`} quantity={stats.views} />
         <InfoProfile label={`Likes`} quantity={stats.likes}/>
-      </ul>
-    </div>
+      </Box>
+    </Box>
   );
 }
 
