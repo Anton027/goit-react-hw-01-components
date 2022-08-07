@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { InfoPrWrap } from './InfoProfile.styled.js';
+import { InfoPrWrap } from './InfoProfile.styled';
 
 export const InfoProfile = ({ label, quantity }) => { 
   return (
