@@ -9,7 +9,7 @@ export const Profile = (
   { username, tag, location, avatar, stats }
 ) => {
   return (
-    <Box mb={20}
+    <Box mb={40}
       display='flex'
         flexDirection='column'
         alignItems='center'
