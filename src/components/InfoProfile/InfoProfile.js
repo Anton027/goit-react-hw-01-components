@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
+import { InfoPrWrap } from './InfoProfile.styled';
+
 export const InfoProfile = ({ label, quantity }) => { 
   return (
-    <li>
+    <InfoPrWrap>
       <span>{label}</span>
       <span>{quantity}</span>
-    </li>
+    </InfoPrWrap>
   )
 };
 
 InfoProfile.propTypes = {
-    label: PropTypes.string.isRequired,
-    quantity: PropTypes.number.isRequired
+  label: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired
 }

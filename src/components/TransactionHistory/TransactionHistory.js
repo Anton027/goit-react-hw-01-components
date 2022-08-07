@@ -1,8 +1,8 @@
-import transactions from "components/TransactionHistory/transactions.json";
+
 import { TransactionItem } from "components/TransactionItem/TransactionItem";
 import { Box } from 'components/Box';
 
-export const TransactionHistory = () => {
+export const TransactionHistory = ({items}) => {
     return (
         <Box as={"table"}>
             <thead>
@@ -14,7 +14,7 @@ export const TransactionHistory = () => {
             </thead>
 
             <tbody>
-                {transactions.map(({ id, type, amount, currency }) => (
+                {items.map(({ id, type, amount, currency }) => (
                     <TransactionItem key={id}
                         type={type} amount={amount}
                         currency={currency}

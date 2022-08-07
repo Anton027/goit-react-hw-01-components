@@ -1,15 +1,15 @@
-import friends from "components/FriendList/friends.json";
+
 import { Box } from 'components/Box';
 import { FriendListItem } from "components/FriendListItem/FriendListItem";
 
 
-export const FriendList = () => {
+export const FriendList = ({friends}) => {
     return (
         <Box as={"ul"}>
-            {friends.map(({ avatar, name, isOnline, id }) => (
+            {friends.map((data) => (
                 <FriendListItem
-                    key={id} avatar={avatar}
-                    name={name} isOnline={isOnline}
+                    key={data.id} avatar={data.avatar}
+                    name={data.name} isOnline={data.isOnline}
                 />
             ))}
         </Box>

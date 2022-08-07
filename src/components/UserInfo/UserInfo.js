@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
+import { UserInfoImg, UserInfoText, UserInfoName } from './UserInfo.styled';
 export const UserInfo = ({ label, text, info, imgUrl }) => {
   return (
     <>
-      <img src={imgUrl} alt={label} width='120'/>
-      <p>{label}</p>
-      <p>{text}</p>
-      <p>{info}</p>
+      <UserInfoImg>
+        <img src={imgUrl} alt={label} width='120'/>
+      </UserInfoImg>
+      
+      <UserInfoName>{label}</UserInfoName>
+      <UserInfoText>{text}</UserInfoText>
+      <UserInfoText>{info}</UserInfoText>
     </>
   )
 };
