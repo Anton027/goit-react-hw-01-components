@@ -4,7 +4,7 @@ import { CheckSpanWrap } from './FriendListItem.styled';
 export const FriendListItem = ({ avatar, name, isOnline }) => {
     return (
         <FriendListWrap>
-            <CheckSpanWrap>{isOnline}</CheckSpanWrap>
+            <CheckSpanWrap selected={isOnline}></CheckSpanWrap>
             <img src={avatar} alt="User avatar" width="48" />
             <p >{name}</p>
         </FriendListWrap>

@@ -14,6 +14,6 @@ export const FriendListWrap= styled.li`
 export const CheckSpanWrap = styled.span`
     min-height: 15px;
     min-width: 15px;
-    background-color: green;
+    background-color:${ p => p.selected ? "green" : "red"};
     border-radius: 50%;
 `;
