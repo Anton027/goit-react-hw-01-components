@@ -19,7 +19,7 @@ export const Profile = (
         flexDirection='column'
         alignItems='center'
       >
-        <UserInfo imgUrl={avatar} label={username} text={tag} info={location} />
+        <UserInfo imgUrl={avatar} label={username} text={'@' + tag} info={location} />
       </Box>
       <Box
         as={"ul"}

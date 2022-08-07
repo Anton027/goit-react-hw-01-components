@@ -5,7 +5,7 @@ export const InfoPrWrap = styled.li`
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    background-color: #bde6ee;
+    background-color: ${p => p.theme.colors.muted};
     padding: 10px;
     border: 1px solid black;
     
