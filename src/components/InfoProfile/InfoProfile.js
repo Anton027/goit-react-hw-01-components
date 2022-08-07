@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import { InfoPrWrap } from './InfoProfile.styled';
+
 
 export const InfoProfile = ({ label, quantity }) => { 
   return (
-    <InfoPrWrap>
+    <li>
       <span>{label}</span>
       <span>{quantity}</span>
-    </InfoPrWrap>
+    </li>
   )
 };
 
